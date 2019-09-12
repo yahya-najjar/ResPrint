@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_small"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_padding_small"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/text_size_large"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/lblCompanyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact" />
+                    <TextView
+                        android:textSize="@dimen/text_size_normal"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/lblAddress"
+                        android:padding="@dimen/dimen_1x"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_title" />
+                </LinearLayout>
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/txt_inline_orange"
+                    android:layout_width="@dimen/inline_width"
+                    android:layout_height="@dimen/inline_height"
+                    android:layout_centerHorizontal="true" />
+                <LinearLayout
+                    android:paddingTop="@dimen/margin_padding_tiny"
+                    android:paddingBottom="@dimen/margin_padding_tiny"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin_padding_small"
+                        android:paddingBottom="@dimen/margin_padding_small"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <LinearLayout android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_smartphone"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="(+963) 934904212"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cMobile"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_whatsapp"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="(+963) 934904212"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cWhatsapp"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_telegram"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="(+963) 934904212"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cTelegram"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_padding_tiny" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_closed_envelope_circle"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="info@naaweh.com"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cEmail"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_padding_tiny" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_messenger"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="https://www.facebook.com/naweh"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cMessenger"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_padding_tiny" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_internet"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="http://naweh.like-asp.com"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cWebsite"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_padding_tiny" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:padding="@dimen/margin_padding_tiny"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_padding_small">
+                            <ImageView
+                                app:srcCompat="@drawable/ic_24_hours"
+                                android:layout_width="@dimen/image_contact_icon"
+                                android:layout_height="@dimen/image_contact_icon" />
+                            <TextView
+                                android:text="(+963) 934904212"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textColor="@color/text_color_reach"
+                                android:id="@+id/cPhone"
+                                android:paddingLeft="@dimen/margin_padding_small"
+                                android:paddingTop="@dimen/margin_padding_tiny"
+                                android:paddingRight="@dimen/margin_padding_small"
+                                android:paddingBottom="@dimen/margin_padding_small"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_padding_tiny" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

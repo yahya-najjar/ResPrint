@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="margin_8X">24dp</dimen>
+    <dimen name="margin_4X">16dp</dimen>
+    <dimen name="margin_3X">12dp</dimen>
+    <dimen name="margin_2X">8dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_X">4dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="dialog_min_with">100dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="small_text">12sp</dimen>
+    <dimen name="medium_text">14sp</dimen>
+    <dimen name="large_text">16sp</dimen>
+    <dimen name="activity_margin_content">24dp</dimen>
+
+    <dimen name="items_inbetween_space">8dp</dimen>
+    <dimen name="items_top_padding">4dp</dimen>
+
+    <dimen name="timer_icon">20dp</dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">40dp</dimen>
+    <dimen name="txtSize">26sp</dimen>
+
+    <dimen name="dimen_x1x">12.0dip</dimen>
+    <dimen name="dimen_x2x">20.0dip</dimen>
+    <dimen name="dimen_x3x">28.0dip</dimen>
+    <dimen name="dimen_x4x">36.0dip</dimen>
+    <dimen name="dimen_05x">4.0dip</dimen>
+    <dimen name="dimen_10x">80.0dip</dimen>
+    <dimen name="dimen_11x">88.0dip</dimen>
+    <dimen name="dimen_12x">96.0dip</dimen>
+    <dimen name="dimen_1x">8.0dip</dimen>
+    <dimen name="dimen_2x">16.0dip</dimen>
+    <dimen name="dimen_3x">24.0dip</dimen>
+    <dimen name="dimen_4x">32.0dip</dimen>
+    <dimen name="dimen_5x">40.0dip</dimen>
+    <dimen name="dimen_6x">48.0dip</dimen>
+    <dimen name="dimen_7x">56.0dip</dimen>
+    <dimen name="dimen_8x">64.0dip</dimen>
+    <dimen name="dimen_9x">72.0dip</dimen>
+    <dimen name="dimen_avatar">160.0dip</dimen>
+    <dimen name="dimen_button_close">30.0dip</dimen>
+    <dimen name="dimen_button_media">35.0dip</dimen>
+    <dimen name="dimen_large_icon">70.0dip</dimen>
+    <dimen name="text_margin">16.0dip</dimen>
+    <dimen name="text_size_header">22.0sp</dimen>
+    <dimen name="text_size_height">30.0dip</dimen>
+    <dimen name="text_size_huge">36.0sp</dimen>
+    <dimen name="text_size_large">18.0sp</dimen>
+    <dimen name="text_size_normal">14.0sp</dimen>
+    <dimen name="text_size_rowitem">13.0dip</dimen>
+    <dimen name="text_size_small">12.0sp</dimen>
+    <dimen name="text_size_tiny">6.0sp</dimen>
+    <dimen name="text_size_xlarge">20.0sp</dimen>
+    <dimen name="text_size_xnormal">16.0sp</dimen>
+    <dimen name="text_size_xsmall">10.0sp</dimen>
+    <dimen name="text_size_xtiny">8.0sp</dimen>
+    <dimen name="text_size_xxlarge">24.0sp</dimen>
+    <dimen name="text_size_xxnormal">18.0sp</dimen>
+    <dimen name="text_size_xxsmall">8.0sp</dimen>
+    <dimen name="title_txt">16.0dip</dimen>
+    <dimen name="width_image_song">52.0dip</dimen>
+    <dimen name="width_song_info_text_1">100.0dip</dimen>
+    <dimen name="width_text_spinner">150.0dip</dimen>
+    <item type="dimen" name="radius_button_rectag">@dimen/dimen_x3x</item>
+    <dimen name="bt_switch">25.0dip</dimen>
+    <dimen name="height_note_order">90.0dip</dimen>
+    <dimen name="margin_padding_normal">10.0dip</dimen>
+    <dimen name="image_contact_icon">40.0dip</dimen>
+    <dimen name="margin_large">70.0dip</dimen>
+    <dimen name="margin_padding_large">18.0dip</dimen>
+    <dimen name="margin_padding_small">16.0dip</dimen>
+    <dimen name="margin_padding_tiny">4.0dip</dimen>
+    <dimen name="margin_padding_xlarge">20.0dip</dimen>
+    <dimen name="margin_padding_xnormal">12.0dip</dimen>
+    <dimen name="margin_padding_xsmall">5.0dip</dimen>
+    <dimen name="inline_height">6.0px</dimen>
+    <dimen name="inline_width">90.0dip</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+
+
+</resources>

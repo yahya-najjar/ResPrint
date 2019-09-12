@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#052D35</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorPrimaryBackground">#052D35</color>
+    <color name="colorAccent">#216c84</color>
+
+    <color name="colorNavCard">#001c3d</color>
+    <color name="colorCardView">#75000000</color>
+    <color name="starColor">#f2b01e</color>
+    <color name="starColorDefault">#f0f0f0</color>
+    <color name="accent">#216c84</color>
+    <color name="custom_dark_grey">#222222</color>
+    <color name="custom_blue">#205aa2</color>
+    <color name="dark_blue">#003572</color>
+    <color name="custom_square">#e7e7e7</color>
+    <color name="custom_white">#eeeeee</color>
+    <color name="custom_brown">#5F4544</color>
+    <color name="dark_brown">#3F3131</color>
+    <color name="custom_golden">#ff7320</color>
+    <color name="colorTransparent">#00ffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="dark_grey">#A9A9A9</color>
+    <color name="custom_grey">#8397A0</color>
+    <color name="custom_green">#16DB9A</color>
+    <color name="light_blue">#6CC2E3</color>
+    <color name="red">#E24C4B</color>
+    <color name="red_gradent">#7e0a08</color>
+    <color name="custom_orange">#FD8A13</color>
+    <color name="orange_primary">#FFD700</color>
+    <color name="black">#000000</color>
+    <color name="orange">#FF8C00</color>
+    <color name="colorPrimaryText">#fffbfbfb</color>
+    <color name="transparent">#ffffff00</color>
+    <color name="color_holo_trans">#cc9e9e9e</color>
+    <color name="text_color_reach">#b360692a</color>
+    <color name="color_sale">#ffff9800</color>
+
+
+
+    <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->
+    <!-- MaterialDrawer DEFAULT colors -->
+    <color name="material_drawer_background">#FFEFB4</color>
+    <!-- Material DEFAULT text / items colors -->
+    <color name="material_drawer_primary_text">#4e9bb4</color>
+    <color name="material_drawer_primary_icon">#236F88</color>
+    <color name="material_drawer_divider">#236F88</color>
+    <color name="mat_nav">#1ea5ff</color>
+    <color name="mat_nav2">#12d4fa</color>
+    <!-- Material DEFAULT drawer colors -->
+    <color name="material_drawer_selected">#FFEFB4</color>
+    <color name="material_drawer_selected_legacy">#FFEFB4</color>
+    <color name="material_drawer_selected_text">#F4AA12</color>
+    <color name="material_drawer_header_selection_text">#FFEFB4</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
+    <color name="textcolorHeader">#069ECF</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#A5A5A5</color>
+
+    <!--switch color-->
+
+    <color name="thumb_active">#069ECF</color>
+    <color name="track_active">#66069ECF</color>
+
+    <color name="thumb_inactive">#A5A5A5</color>
+    <color name="track_inactive">#66585353</color>
+</resources>

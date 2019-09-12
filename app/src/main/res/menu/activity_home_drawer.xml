@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--<item-->
+            <!--android:id="@+id/home"-->
+            <!--android:icon="@drawable/ic_custom_home"-->
+            <!--android:title="@string/home" />-->
+        <!--<item-->
+            <!--android:id="@+id/lang"-->
+            <!--android:icon="@drawable/ic_custom_language"-->
+            <!--android:title="@string/longitude" />-->
+
+
+        <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_custom_settings"
+        android:title="@string/settings" />
+
+
+        <item
+            android:id="@+id/policy"
+            android:icon="@drawable/ic_custom_policy"
+            android:title="@string/policy" />
+
+
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/ic_custom_contact"
+            android:title="@string/contact" />
+
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_custom_about_us"
+            android:title="@string/about_us" />
+
+
+    </group>
+
+
+</menu>

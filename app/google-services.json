@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "270723983053",
+    "firebase_url": "https://bloem-7642c.firebaseio.com",
+    "project_id": "bloem-7642c",
+    "storage_bucket": "bloem-7642c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270723983053:android:1242fdcdc794b8039b2b84",
+        "android_client_info": {
+          "package_name": "com.ancologi.applications.bloemb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270723983053-f950p88revto1618dgp5qtp9t4rbob61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADTPFR-1RS1-ysG96-OZ7NSaWLajHcCKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270723983053-f950p88revto1618dgp5qtp9t4rbob61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

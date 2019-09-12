@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/custom_golden">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingTop="@dimen/margin_4X"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rounded_logo" />
+        <TextView
+            android:textColor="@color/custom_brown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/website_url"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_marginTop="@dimen/margin_2X"
+            android:layout_marginBottom="@dimen/margin_2X"
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/now"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:textAlignment="center"
+                android:padding="6dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:background="@drawable/rounded_reg_input"
+                android:text="@string/now"
+                android:textColor="@color/custom_golden"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/min_30"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:textAlignment="center"
+                android:padding="6dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:background="@drawable/rounded_reg_input"
+                android:text="@string/min_30"
+                android:textColor="@color/custom_golden"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/min_45"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:padding="6dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:background="@drawable/rounded_reg_input"
+                android:text="@string/min_45"
+                android:textColor="@color/custom_golden"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/min_60"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:padding="6dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:background="@drawable/rounded_reg_input"
+                android:text="@string/min_60"
+                android:textColor="@color/custom_golden"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</android.support.design.widget.AppBarLayout>
