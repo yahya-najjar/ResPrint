@@ -13,15 +13,15 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
@@ -41,10 +41,10 @@ import com.ancologi.applications.bloemb.R;
 import com.ancologi.applications.bloemb.Utils.CustomDialog;
 import com.ancologi.applications.bloemb.Utils.UserUtils;
 import com.ancologi.applications.bloemb.Utils.Utils;
+import com.mazenrashed.printooth.Printooth;
 
 import org.json.JSONObject;
 
-import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
@@ -75,6 +75,8 @@ public abstract class MasterActivity extends AppCompatActivity implements Naviga
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+
         Log.d("masterB","masterB");
         super.onCreate(savedInstanceState);
         super.setContentView(contentViewRes);
@@ -119,6 +121,12 @@ public abstract class MasterActivity extends AppCompatActivity implements Naviga
             locale = new Locale("ar","SA");
         }else
             locale = new Locale("en","US");
+
+        mp = MediaPlayer.create(getApplicationContext(), R.raw.notification);
+        if (mp !=null && mp.isPlaying()){
+            mp.stop();
+            mp.release();
+        }
 
 
     }

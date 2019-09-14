@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_small"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnPrint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_2X"
+                    android:background="@drawable/rounded_dialog"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="@string/print"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnPrintImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_2X"
+                    android:background="@drawable/rounded_dialog"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="print image"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnPairUnpair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_2X"
+                    android:background="@drawable/rounded_dialog"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="Pair"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/txtText"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="Attach Printer"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/margin_2X"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblPrinterName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size_medium"
+                    android:text="Printer Name"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/margin_2X"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

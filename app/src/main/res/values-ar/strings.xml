@@ -38,4 +38,7 @@
     <string name="now">At Time</string>
     <string name="min_45">after 45 Min</string>
     <string name="min_60">after 60 Min</string>
+    <string name="total">totaal</string>
+    <string name="pick_delay_time">Pick delay time first</string>
+    <string name="bluetooth">Bluetooth</string>
 </resources>

@@ -1,7 +1,7 @@
 package com.ancologi.applications.bloemb.Utils;
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 public abstract class PaginationScrollListener extends RecyclerView.OnScrollListener {

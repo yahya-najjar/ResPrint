@@ -25,13 +25,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.AudioAttributes;
+import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
 
+import com.ancologi.applications.bloemb.Activities.ShowOrderActivity;
 import com.ancologi.applications.bloemb.Masters.MasterActivity;
 import com.ancologi.applications.bloemb.R;
 import com.google.firebase.BuildConfig;
@@ -67,8 +69,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     public int UserId=0;
     public String Token = "",FCM_Token="";
-    Set unread_records = new HashSet<>();
+    Set unread_orders = new HashSet<>();
     public int budges_count=0;
+
+    private MediaPlayer mp;
 
 
     /**
@@ -128,15 +132,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        // [START_EXCLUDE]
-        // There are two types of messages data messages and notification messages. Data messages are handled
-        // here in onMessageReceived whether the app is in the foreground or background. Data messages are the type
-        // traditionally used with GCM. Notification messages are only received here in onMessageReceived when the app
-        // is in the foreground. When the app is in the background an automatically generated notification is displayed.
-        // When the user taps on the notification they are returned to the app. Messages containing both notification
-        // and data payloads are treated as notification messages. The Firebase console always sends notification
-        // messages. For more see: https://firebase.google.com/docs/cloud-messaging/concept-options
-        // [END_EXCLUDE]
+
 
         // TODO(developer): Handle FCM messages here.
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
@@ -149,57 +145,42 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
-            /*if ( Check if data needs to be processed by long running job  true) {
-                // For long-running tasks (10 seconds or more) use Firebase Job Dispatcher.
-                //scheduleJob();
-                handleNow();
-            } else {
-                // Handle message within 10 seconds
-                handleNow();
-            }*/
 
-            unread_records = readSharedPreferenceStringSet("unread_records");
+            unread_orders = readSharedPreferenceStringSet("unread_orders");
             budges_count = readSharedPreferenceInt("budges_count");
             budges_count ++;
 
             writeSharedPreferenceInt("budges_count",budges_count);
             String new_record;
             String action = remoteMessage.getData().get("action");
-            Log.d("unread_records0",String.valueOf(action));
-            Log.d("unread_records",String.valueOf(unread_records));
+            Log.d("unread_orders0",String.valueOf(action));
+            Log.d("unread_orders",String.valueOf(unread_orders));
             if (action != null)
                 switch (action){
                     case "custom":
                         new_record = remoteMessage.getData().get("record_id");
-                        Log.d("unread_records0",String.valueOf(new_record));
-                        unread_records.add(new_record);
-                        Log.d("unread_records1",String.valueOf(unread_records));
+                        Log.d("unread_orders0",String.valueOf(new_record));
+                        unread_orders.add(new_record);
+                        Log.d("unread_orders1",String.valueOf(unread_orders));
                         break;
                     case "stacked":
                         new_record = remoteMessage.getData().get("record_id");
-                        Log.d("unread_records0",String.valueOf(new_record));
+                        Log.d("unread_orders0",String.valueOf(new_record));
                         String replace = new_record.replace("[","");
                         String replace1 = replace.replace("]","");
                         List<String> myList = new ArrayList<String>(Arrays.asList(replace1.split(",")));
-                        unread_records.addAll(myList);
-                        Log.d("unread_records2",String.valueOf(unread_records));
+                        unread_orders.addAll(myList);
+                        Log.d("unread_orders2",String.valueOf(unread_orders));
                         break;
                         default:
                             break;
                 }
 
 
-
-
             sendNotification(remoteMessage.getData().get("body"),remoteMessage.getData().get("title"),remoteMessage.getData().get("bodyAr"), remoteMessage.getData().get("action"),remoteMessage.getData().get("record_id"));
 
             ShortcutBadger.applyCount(getApplicationContext(), budges_count); //for 1.1.4+
-//
-//            try {
-//                Badges.setBadge(getApplicationContext(), budges_count);
-//            } catch (BadgesNotSupportedException badgesNotSupportedException) {
-//                Log.d(TAG, badgesNotSupportedException.getMessage());
-//            }
+
         }
 
 
@@ -210,24 +191,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             sendNotification(remoteMessage.getNotification().getBody(),remoteMessage.getNotification().getTitle(),null,"","");
         }
 
-        // Also if you intend on generating your own notifications as a result of a received FCM
-        // message, here is where that should be initiated. See sendNotification method below.
+
     }
     // [END receive_message]
-
-    /**
-     * Schedule a job using FirebaseJobDispatcher.
-     */
-    /*private void scheduleJob() {
-        // [START dispatch_job]
-        FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(this));
-        Job myJob = dispatcher.newJobBuilder()
-                .setService(MyJobService.class)
-                .setTag("my-job-tag")
-                .build();
-        dispatcher.schedule(myJob);
-        // [END dispatch_job]
-    }*/
 
 
 
@@ -321,18 +287,18 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Intent intent;
         if (action.equals("all" ))
         {
-            Log.d("unread_records3","entered_all");
+            Log.d("unread_orders3","entered_all");
             intent = new Intent(this, MasterActivity.class); // home activity
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("FCM_ACTION", "show_my_view");
         }
         else if (action.equals("custom"))
         {
-            Log.d("unread_records3","entered_custom");
-            intent = new Intent(this, MasterActivity.class); // show activity
+            Log.d("unread_orders3","entered_custom");
+            intent = new Intent(this, ShowOrderActivity.class); // show activity
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("FCM_ACTION", "custom");
-            intent.putExtra("record_id",Integer.parseInt(record_id));
+            intent.putExtra("order_id",Integer.parseInt(record_id));
 
         }else
         {
@@ -382,7 +348,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
             Log.d("SDK_INT",String.valueOf(Build.VERSION.SDK_INT));
-            CharSequence name = "naawa" + notification_sound;
+            CharSequence name = "bloem" + notification_sound;
             String Description = "This is my channel";
             int importance;
             if (isMuted){
@@ -428,6 +394,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         notificationBuilder.setContentIntent(resultPendingIntent);
 
         notificationManager.notify(c.incrementAndGet() /* ID of notification */, notificationBuilder.build());
+
+        if (mp !=null && mp.isPlaying())
+            mp.stop();
+
+        mp = MediaPlayer.create(getApplicationContext(), R.raw.notification);
+        mp.setLooping(true);
+        mp.start();
+
+
 
     }
 
